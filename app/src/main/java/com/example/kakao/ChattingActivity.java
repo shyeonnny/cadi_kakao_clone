@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -21,7 +22,7 @@ public class ChattingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chatting);
 
         ListView chatview = (ListView)findViewById(R.id.lv_item);
-        Button btn_back = (Button)findViewById(R.id.btn_back);
+        ImageButton btn_back = (ImageButton)findViewById(R.id.btn_back);
         TextView tv_title = (TextView)findViewById(R.id.tv_title);
 
         ChatViewAdapter adapter = new ChatViewAdapter();

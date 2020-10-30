@@ -12,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_back"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="뒤"
+            app:srcCompat="@drawable/abc_vector_test"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,14 +32,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btn_find"
+        <ImageButton
+            android:id="@+id/btn_search"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="F"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_search" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ListView
@@ -51,13 +52,15 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_plus"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text="+" />
+            app:srcCompat="@android:drawable/ic_menu_add" />
 
         <EditText
             android:id="@+id/et_talk"
@@ -67,17 +70,18 @@
             android:ems="10"
             android:inputType="textPersonName" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_imoge"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:text=":)" />
+            app:srcCompat="@drawable/image_imoge" />
 
         <Button
-            android:id="@+id/btn_search"
+            android:id="@+id/btn_shop"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:text="#" />
+
     </LinearLayout>
 
 

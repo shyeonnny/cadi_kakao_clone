@@ -21,33 +21,29 @@
             android:textAlignment="textStart"
             android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/btn_find"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="F" />
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@android:drawable/ic_menu_search" />
 
-        <Button
-            android:id="@+id/btn_add"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="+" />
+        <ImageButton
+            android:id="@+id/btn_addtalk"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/image_addtalk" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_music"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="M" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/image_music" />
 
-        <Button
-            android:id="@+id/btn_set"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:text="S" />
+        <ImageButton
+            android:id="@+id/btn_setting"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/image_setting" />
 
     </LinearLayout>
 
