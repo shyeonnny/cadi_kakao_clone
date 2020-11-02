@@ -17,12 +17,8 @@ public class ChatlistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatlist);
 
-        Intent j_back = getIntent();
-
         ListView chatlistview = (ListView)findViewById(R.id.lv_chat);
-
-        ChatViewAdapter adapter = new ChatViewAdapter();
-
+        ChatlistViewAdapter adapter = new ChatlistViewAdapter();
         chatlistview.setAdapter(adapter);
 
         adapter.addTalk(ContextCompat.getDrawable(this, R.drawable.instagram), "instagram", "안녕하세요!");

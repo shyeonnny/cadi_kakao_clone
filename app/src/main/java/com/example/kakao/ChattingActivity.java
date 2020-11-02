@@ -6,13 +6,9 @@ import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.example.kakao.ChatViewAdapter;
-import com.example.kakao.R;
 
 public class ChattingActivity extends AppCompatActivity {
 
@@ -23,7 +19,7 @@ public class ChattingActivity extends AppCompatActivity {
 
         ListView chatview = (ListView)findViewById(R.id.lv_item);
         ImageButton btn_back = (ImageButton)findViewById(R.id.btn_back);
-        TextView tv_title = (TextView)findViewById(R.id.tv_title);
+        TextView tv_title = (TextView)findViewById(R.id.tv_lasttalk);
 
         ChatViewAdapter adapter = new ChatViewAdapter();
         chatview.setAdapter(adapter);

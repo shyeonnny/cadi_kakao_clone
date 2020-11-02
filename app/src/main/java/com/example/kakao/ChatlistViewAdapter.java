@@ -11,17 +11,17 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ChatViewAdapter extends BaseAdapter {
-    private ArrayList<com.example.kakao.ChattingItem> chattingItems = new ArrayList<>();
+public class ChatlistViewAdapter extends BaseAdapter {
+    private ArrayList<ChatlistItem> chatlistItems = new ArrayList<>();
 
     @Override
     public int getCount() {
-        return chattingItems.size();
+        return chatlistItems.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return chattingItems.get(i);
+        return chatlistItems.get(i);
     }
 
     @Override
@@ -36,30 +36,28 @@ public class ChatViewAdapter extends BaseAdapter {
 
         if(view == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.chatting_item, viewGroup, false);
+            view = inflater.inflate(R.layout.chatlist_item, viewGroup, false);
         }
 
-        ImageView iv_user = (ImageView) view.findViewById(R.id.iv_user);
-        TextView tv_name = (TextView) view.findViewById(R.id.tv_name);
+        ImageView iv_user = (ImageView) view.findViewById(R.id.iv_chat);
+        TextView tv_name = (TextView) view.findViewById(R.id.tv_title);
         TextView tv_talk = (TextView) view.findViewById(R.id.tv_lasttalk);
 
-        com.example.kakao.ChattingItem chattingItem = chattingItems.get(i);
+        com.example.kakao.ChatlistItem chatlistItem = chatlistItems.get(i);
 
-        iv_user.setImageDrawable(chattingItem.getUserDrawable());
-        tv_name.setText(chattingItem.getNameStr());
-        tv_talk.setText(chattingItem.getTalkStr());
+        iv_user.setImageDrawable(chatlistItem.getChatDrawable());
+        tv_name.setText(chatlistItem.getTitleStr());
+        tv_talk.setText(chatlistItem.getLasttalkStr());
 
         return view;
     }
 
     public void addTalk(Drawable image, String name, String talk){
-        com.example.kakao.ChattingItem item = new com.example.kakao.ChattingItem();
-        item.setUserDrawable(image);
-        item.setNameStr(name);
-        item.setTalkStr(talk);
+        com.example.kakao.ChatlistItem item = new com.example.kakao.ChatlistItem();
+        item.setChatDrawable(image);
+        item.setTitleStr(name);
+        item.setLasttalkStr(talk);
 
-        chattingItems.add(item);
+        chatlistItems.add(item);
     }
-
-
 }
